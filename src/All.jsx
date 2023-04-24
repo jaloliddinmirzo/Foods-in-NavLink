@@ -10,6 +10,7 @@ import photo8 from './images/item-8.jpeg'
 import photo9 from './images/item-9.jpeg'
 import URL from './Base'
 import { Card } from './Card'
+import { Animated } from 'react-animated-css'
 
 export const foto = ["", photo, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9]
 function All({ condition }) {
@@ -34,7 +35,9 @@ function All({ condition }) {
     }, [items]);
     return (
         <>
-            {items.map(item => <Card key={item.id} {...item} img={foto[item.id]} />)}
+            <Animated animationIn="bounceInLeft" className='section-center' animationOut="fadeOut" isVisible={true}>
+                {items.map(item => <Card key={item.id} {...item} img={foto[item.id]} />)}
+            </Animated>
         </>
 
     )

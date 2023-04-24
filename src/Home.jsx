@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import "./index.css"
 import All from './All'
+import { Animated } from 'react-animated-css'
 
 
 
@@ -40,9 +41,10 @@ const Home = () => {
           }}
         >shakes</NavLink>
       </div>
-      <div className="section-center">
-        <Outlet></Outlet>
-      </div>
+
+        <div className="section-center">
+          <Outlet></Outlet>
+        </div>
     </section>
   )
 }
